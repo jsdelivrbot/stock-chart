@@ -8,7 +8,7 @@ import {
     USER_SUBMISSION_SUCCESS,
     REMOVE_STOCK
 } from './types';
-const ROOT_URL = 'http://localhost:3090';
+const ROOT_URL = 'https://murmuring-chamber-60018.herokuapp.com';
 const ROOT_STOCK_API = 'https://api.iextrading.com/1.0/stock/market/batch?';
 let socket = io(ROOT_URL);
 function returnRandomHex() {
@@ -17,7 +17,6 @@ function returnRandomHex() {
 export function chartAccessed() {
     return function(dispatch) {
         socket.on('stock data', (data) => {
-            console.log(data['data']);
             //if no stocks are returned then the db is empty
             if(!data['data'].length) {
                 return;
