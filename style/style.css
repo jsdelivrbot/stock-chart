@@ -1,0 +1,21 @@
+.container {
+    margin-top: 40px;
+}
+.error {
+    color: red;
+}
+.panel-default {
+    border: 1px solid #dddd;
+    border-radius: 5px;
+    padding: 5px;
+    overflow: hidden;
+}
+.stock-symbol {
+    float: left;
+}
+.btn-danger {
+    float: right;
+}
+.search-bar {
+    margin-top: 20px;
+}
